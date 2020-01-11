@@ -9,7 +9,7 @@ function App() {
 
 	useEffect(() => {
 		axios
-			.get('https://my.api.mockaroo.com/cars.json?key=aee89bf0')
+			.get('https://carapi.mtrew.now.sh/api/cars')
 			.then((res) => setData(res.data))
 			.catch((err) => console.log(err));
 	}, []);
