@@ -50,7 +50,7 @@ function Card(props) {
 			</Para>
 			<Image src={picture} />
 			<Para>Miles: {props.car.miles}</Para>
-			<Para>Price ${props.car.price}</Para>
+			<Para>Price ${props.car.price.toLocaleString()}</Para>
 			<Quote>Get Your VIP Pricing</Quote>
 		</Wrapper>
 	);
