@@ -1,44 +1,57 @@
 import React from 'react';
 import picture from '../../comingSoon.jpg';
-import styled from 'styled-components'
+import styled from 'styled-components';
 
-
-const Wrapper = styled.div ` 
+const Wrapper = styled.div` 
 display: flex; 
 width: 26%;
 flex-direction: column;
-background-color: black;
+background-color: white;
 align-items: center;
 height: 100%;
 margin: 2%
 padding: 10px;
-`
- const Image = styled.img `
-width: 70%;
-height: 200px;
-border: 3px solid crimson;
-margin: 20px;
-`
+`;
+const Image = styled.img`
+	width: 100%;
+	height: 200px;
+	margin: 20px;
+`;
 
-const Para = styled.p ` 
-font-size: 1.2rem;
-color: white;
-`
+const Used = styled.span`
+	font-size: 1.4rem;
+	font-weight: bolder;
+	color: gray;
+	margin-right: 5px;
+`;
 
+const Para = styled.p`
+	font-size: 1.2rem;
+	color: black;
+`;
 
-
-
+const Quote = styled.button`
+	width: 90%;
+	background-color: crimson;
+	color: white;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	font-size: 1.4rem;
+	margin-top: 5px;
+`;
 
 function Card(props) {
 	return (
 		<Wrapper>
-			<Image src={picture}></Image>
-			<Para>Make: {props.car.make}</Para>
-			<Para>Year: {props.car.year}</Para>
-            <Para>Model: {props.car.model}</Para>
-            <Para>Miles: {props.car.miles}</Para>
+			<Para>
+				<Used>Used</Used>
+				{props.car.year} {props.car.make} {props.car.model}
+			</Para>
+			<Image src={picture} />
+			<Para>Miles: {props.car.miles}</Para>
 			<Para>Price ${props.car.price}</Para>
-			<Para>Call For Carfax</Para>
+			<Quote>Get Your VIP Pricing</Quote>
 		</Wrapper>
 	);
 }

@@ -5,6 +5,6 @@ display: flex;
 flex-direction: row;
 flex-wrap: wrap;
 align-items: center;
-background-color: lightgray;
+background-color: darkgray;
 `
 
