@@ -15,7 +15,7 @@ padding: 10px;
 const Image = styled.img`
 	width: 100%;
 	height: 200px;
-	margin: 20px;
+	margin: 20px 0 10px 0
 `;
 
 const Used = styled.span`
